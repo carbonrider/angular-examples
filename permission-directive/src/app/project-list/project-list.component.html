@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="table">
+        <div class="tr" *ngFor="let project of projects">
+            <div class="td">{{project.name}}</div>
+            <div class="td">{{project.description}}</div>
+            <div class="td">
+                <button (click)="onEditClick()" *appPermission="'PROJECT_EDITOR'">Edit</button> &nbsp;
+                <button (click)="onViewClick()">View</button>
+            </div>
+        </div>
+    </div>
+</div>

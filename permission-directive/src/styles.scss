@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.table {
+    display: table;
+}
+
+.tr {
+    display: table-row;
+}
+
+.td {
+    display: table-cell;
+    padding: 5px 10px;
+}
+

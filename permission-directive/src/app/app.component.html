@@ -1,0 +1,8 @@
+<div class="container">
+  <a routerLink="/project">Click here</a> to see projects.
+  &nbsp;
+  <div>
+    <button (click)="onLogoutClick()" *ngIf="isLoggedIn"> Logout</button>
+  </div>
+</div>
+<router-outlet></router-outlet>
