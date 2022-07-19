@@ -1,0 +1,41 @@
+<form [formGroup]="bookingForm" (ngSubmit)="submitForm()">
+    <div class="center-container">
+        <mat-card class="booking">
+            <mat-card-title>Booking</mat-card-title>
+            <mat-card-content>
+                <div class="container">
+                    <div class="row">
+                        <mat-form-field class="w-100">
+                            <mat-label>Place</mat-label>
+                            <input matInput formControlName="place" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="w-100">
+                            <mat-label>From Date</mat-label>
+                            <input matInput readonly [matDatepicker]="fromDatepicker" placeholder="From Date"
+                                formControlName="fromDate" autocomplete="off" (focus)="fromDatepicker.open()">
+                            <mat-datepicker-toggle matSuffix [for]="fromDatepicker"></mat-datepicker-toggle>
+                            <mat-datepicker #fromDatepicker></mat-datepicker>
+                            <mat-error *ngIf="bookingForm.get('fromDate').errors?.dateLessThan">
+                                Should be earlier date.
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="w-100">
+                            <mat-label>To Date</mat-label>
+                            <input matInput readonly [matDatepicker]="toDatepicker" placeholder="To Date"
+                                formControlName="toDate" autocomplete="off" (focus)="toDatepicker.open()">
+                            <mat-datepicker-toggle matSuffix [for]="toDatepicker"></mat-datepicker-toggle>
+                            <mat-datepicker #toDatepicker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <button mat-raised-button color="primary">Book It!</button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</form>
