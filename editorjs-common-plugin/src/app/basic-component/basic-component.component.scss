@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.editorWrapper {
+    margin: auto;
+    max-width: 750px;
+    border: 5px solid rgb(215, 214, 214);
+    border-radius: 10px;
+}
